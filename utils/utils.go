@@ -3,10 +3,15 @@ package utils
 import (
 	"bytes"
 	"io/ioutil"
+	"os"
 	"strconv"
 	"strings"
 	"unicode"
 )
+
+func GetFilename() string {
+	return os.Args[1]
+}
 
 // ReadInput returns the contents of filename as a string.
 func ReadInput(filename string) string {
