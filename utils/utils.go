@@ -9,6 +9,7 @@ import (
 	"unicode"
 )
 
+// GetFilename returns first command line argument
 func GetFilename() string {
 	return os.Args[1]
 }
@@ -22,6 +23,7 @@ func ReadInput(filename string) string {
 	return string(bytes.TrimSpace(data))
 }
 
+// ExtractInts returns int array from string
 func ExtractInts(s string) []int {
 	fs := strings.FieldsFunc(s, func(r rune) bool {
 		return !unicode.IsDigit(r) && r != '-'
